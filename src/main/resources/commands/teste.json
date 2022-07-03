@@ -1,0 +1,24 @@
+{
+  "name": "teste",
+  "description": "teste",
+  "type": 1,
+  "dm_permission": false,
+  "default_member_permissions": 0,
+  "options": [
+    {
+      "type": 4,
+      "name": "teste",
+      "description": "teste",
+      "required": false,
+      "autocomplete": false,
+      "min_value": 0,
+      "max_value": 100,
+      "choices": [
+        {
+          "name": "teste",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

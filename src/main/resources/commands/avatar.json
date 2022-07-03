@@ -1,0 +1,16 @@
+{
+  "name": "avatar",
+  "description": "Display the specified user, if provided, or the current user avatar",
+  "type": 1,
+  "dm_permission": true,
+  "default_member_permissions": 0,
+  "options": [
+    {
+      "type": 6,
+      "name": "user",
+      "description": "User to show the avatar of",
+      "required": false,
+      "autocomplete": false
+    }
+  ]
+}

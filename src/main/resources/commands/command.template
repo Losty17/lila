@@ -1,0 +1,43 @@
+{
+  "name": "",
+  "description": "",
+  "type": 1, // SLASH COMMAND --- 2 = CONTEXT MENU | 3 = MESSAGE
+  "dm_permission": false,
+  "default_member_permissions": 0, // ENABLED
+  "options": [
+    {
+      "type": 1, // SUBCOMMAND
+      "name": "",
+      "description": "",
+      "required": false,
+      "options": [
+        {
+          "type": 3, // STRING
+          "name": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "type": 2 // SUBCOMMAND GROUP
+      "name": "",
+      "description": "",
+    },
+    {
+      "type": 10, // NUMBER
+      "name": "",
+      "description": "",
+      "required": false,
+      "autocomplete": false,
+      "min_value": 0,
+      "max_value": 100,
+      // "channel_types" -> if type == CHANNEL
+      "choices": [
+        {
+          "name": "",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

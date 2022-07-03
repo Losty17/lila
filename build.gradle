@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'tech.kappke.lila'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '18'
+
+def jdaVersion = '5.0.0-alpha.13'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation("net.dv8tion:JDA:$jdaVersion")
+	implementation("io.github.cdimascio:dotenv-java:2.2.2")
+
+
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
