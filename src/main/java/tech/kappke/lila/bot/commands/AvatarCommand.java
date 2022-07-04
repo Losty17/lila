@@ -16,7 +16,7 @@ public class AvatarCommand extends AbstractCommand
 	@Override
 	public boolean handle()
 	{
-		var option = event.getOption("member");
+		var option = event.getOption("user");
 		var member = option != null ? option.getAsMember() : event.getMember();
 		var avatar = getIfNotNull(member.getAvatar(), member.getUser().getAvatar());
 		var name = getIfNotNull(member.getNickname(), member.getUser().getName());
