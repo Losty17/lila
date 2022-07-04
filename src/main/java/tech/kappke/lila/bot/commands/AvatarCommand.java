@@ -15,10 +15,17 @@ public class AvatarCommand extends AbstractCommand
 	public boolean handle()
 	{
 		var option = event.getOption("member");
-		var user = option != null ? option.getAsUser() : event.getUser();
-		var avatar = user.getAvatar().getUrl(512);
+		var member = option != null ? option.getAsMember() : event.getMember();
+		var avatar = member.getAvatar();
+		var name = member.getNickname();
 		
-		var embed = new AvatarEmbed(avatar, user.getName() + "'s avatar").get();
+		if (avatar == null)
+		{
+			avatar = member.getUser().getAvatar();
+			name = member.getUser().getName();
+		}
+
+		var embed = new AvatarEmbed(avatar.getUrl(512), name + "'s avatar").get();
 		
 		event.replyEmbeds(embed).queue();
 
